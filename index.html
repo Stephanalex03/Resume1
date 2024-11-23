@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Resume Builder</h1>
+    </header>
+
+    <main>
+        <section id="template-selection">
+            <h2>Choose a Template</h2>
+            <div class="template" onclick="loadTemplate('template1')">
+                <img src="assets/template1.png" alt="Template 1">
+                <p>Template 1</p>
+            </div>
+            <div class="template" onclick="loadTemplate('template2')">
+                <img src="assets/template2.png" alt="Template 2">
+                <p>Template 2</p>
+            </div>
+            <div class="template" onclick="loadTemplate('template3')">
+                <img src="assets/template3.png" alt="Template 3">
+                <p>Template 3</p>
+            </div>
+        </section>
+
+        <section id="form-section">
+            <h2>Fill in Your Details</h2>
+            <form id="resume-form">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="text" id="email" placeholder="Email Address">
+                <input type="text" id="phone" placeholder="Phone Number">
+                <textarea id="skills" placeholder="Skills"></textarea>
+                <textarea id="experience" placeholder="Experience"></textarea>
+                <textarea id="education" placeholder="Education"></textarea>
+                <button type="button" onclick="generateResume()">Generate Resume</button>
+            </form>
+        </section>
+
+        <section id="resume-output">
+            <h2>Your Resume</h2>
+            <div id="resume-template-output"></div>
+        </section>
+    </main>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
